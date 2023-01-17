@@ -6,3 +6,8 @@ services:
       - '8080:8080'
     volumes:
       - /mnt/war:/usr/local/tomcat/webapps
+    logging:
+      driver: awslogs
+      options:
+      - awslogs-group: docker-log
+      - awslogs-region: ap-south-1
